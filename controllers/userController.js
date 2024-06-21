@@ -48,6 +48,7 @@ login = async (req,res)=>{
         const authToken = jwt.sign(key, jwtSecretKey,options); // creating the jwt token.
         return res.json({ userData: data, authToken: authToken });
     } catch (error) {
+        console.log(error)
         // this will be send if the runtime error occurs in the code and if it those try to console it to get the exact route.
         res.status(500).send({status:500});
     }
@@ -239,7 +240,7 @@ sendOtp = async(req,res)=>{
        res.status(200).send({status:200});
     }
     catch(error){
-         // this will be send if the runtime error occurs in the code and if it those try to console it to get the exact route.
+      console.log(error)   // this will be send if the runtime error occurs in the code and if it those try to console it to get the exact route.
          res.status(500).send({status:500});
     }
 }
