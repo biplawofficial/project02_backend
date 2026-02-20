@@ -2,7 +2,7 @@
 const jwt = require('jsonwebtoken');
 
 //secret key that will use to verify the jwt token and it should be same with the sceret key that is used while creating the jwt token
-const jwtSecretKey = "qwertyuiopasdfghjklzxcvbnmqwerty";
+const jwtSecretKey = process.env.JWT_SECRET_KEY;
 
 
 
